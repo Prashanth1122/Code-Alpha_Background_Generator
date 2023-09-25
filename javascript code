@@ -1,0 +1,23 @@
+
+
+const colorPicker = document.getElementById('colorPicker');
+const generateButton = document.getElementById('generateButton');
+const generatedColor = document.getElementById('generatedColor');
+const copyButton = document.getElementById('copyButton');
+
+generateButton.addEventListener('click', () => {
+    const selectedColor = colorPicker.value;
+    document.body.style.backgroundColor = selectedColor;
+    generatedColor.textContent = selectedColor;
+});
+
+copyButton.addEventListener('click', () => {
+    const colorCode = generatedColor.textContent;
+    const tempInput = document.createElement('input');
+    tempInput.value = colorCode;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempInput);
+    alert(`Copied: ${colorCode}`);
+});
