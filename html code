@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles.CSS">
+    <title>Background Generator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Background Generator</h1>
+        <div class="color-box">
+            <input type="color" id="colorPicker">
+            <button id="generateButton">Generate</button>
+        </div>
+        <div id="result" class="color-box">
+            <p>Generated Color: <span id="generatedColor">#ffffff</span></p>
+            <button id="copyButton">Copy to Clipboard</button>
+        </div>
+    </div>
+    <script src="javascript.JS"></script>
+</body>
+</html>
